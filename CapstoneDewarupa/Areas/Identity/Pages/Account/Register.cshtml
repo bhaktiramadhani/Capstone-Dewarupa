@@ -1,0 +1,133 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@* <h1>@ViewData["Title"]</h1>
+
+<div class="row">
+<div class="col-md-4">
+<form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+<h2>Create a new account.</h2>
+<hr />
+<div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+<div class="form-floating mb-3">
+<input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true"
+placeholder="name@example.com" />
+<label asp-for="Input.Email">Email</label>
+<span asp-validation-for="Input.Email" class="text-danger"></span>
+</div>
+<div class="form-floating mb-3">
+<input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true"
+placeholder="password" />
+<label asp-for="Input.Password">Password</label>
+<span asp-validation-for="Input.Password" class="text-danger"></span>
+</div>
+<div class="form-floating mb-3">
+<input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true"
+placeholder="password" />
+<label asp-for="Input.ConfirmPassword">Confirm Password</label>
+<span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+</div>
+<button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+</form>
+</div>
+<div class="col-md-6 col-md-offset-2">
+<section>
+<h3>Use another service to register.</h3>
+<hr />
+@{
+if ((Model.ExternalLogins?.Count ?? 0) == 0)
+{
+<div>
+<p>
+There are no external authentication services configured. See this <a
+href="https://go.microsoft.com/fwlink/?LinkID=532715">article
+about setting up this ASP.NET application to support logging in via external services</a>.
+</p>
+</div>
+}
+else
+{
+<form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post"
+class="form-horizontal">
+<div>
+<p>
+@foreach (var provider in Model.ExternalLogins!)
+{
+<button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your
+@provider.DisplayName account">@provider.DisplayName</button>
+}
+</p>
+</div>
+</form>
+}
+}
+</section>
+</div>
+</div> *@
+<section class="bg-gray-50 dark:bg-gray-900">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse mb-3">
+            <h1 class="text-primary-green text-2xl font-bold">Logo</h1>
+        </a>
+        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800
+dark:border-gray-700">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1
+                    class="text-center text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                    Register
+                </h1>
+                <form class="space-y-4 md:space-y-6" action="#">
+                    <div>
+                        <label for="email"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg
+focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600
+dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email..."
+                            required="">
+                    </div>
+                    <div>
+                        <label for="password"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300
+text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700
+dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required="">
+                    </div>
+                    <div>
+                        <label for="confirmPassword"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">confirmPassword</label>
+                        <input type="confirmPassword" name="confirmPassword" id="confirmPassword" placeholder="••••••••"
+                            class="bg-gray-50 border border-gray-300
+text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700
+dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required="">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded
+bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600
+dark:ring-offset-gray-800" required="">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot
+                            password?</a>
+                    </div>
+                    <button type="submit"
+                        class="w-full text-white bg-primary-green hover:bg-primary-green-hover focus:ring-4 focus:ring-primary-green-hover font-semibold rounded-md text-sm px-[18px] py-2 focus:outline-none">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

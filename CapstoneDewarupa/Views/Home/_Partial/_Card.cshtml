@@ -1,0 +1,19 @@
+﻿@using CapstoneDewarupa.Core
+
+@foreach (var course in Model)
+{
+    <a href="/Belajar/@course.Category/@course.Slug">
+        <div class="w-[320px] h-[280px]">
+            <img class="w-[380px] h-[280px] object-cover rounded-[22px]"
+                src="http://localhost:5270/assets/images/@course.Image" alt="tutorial 1">
+        </div>
+        <div class="p-4">
+            <h4 class="font-bold text-xl">@course.Name</h4>
+            <p class="line-clamp-2 mt-[10px] mb-[18px]">
+                @StringUtilities.Truncate(course.Description, 60)
+            </p>
+            <p>@course.Category</p>
+            <p class="font-medium text-[#8E8E8E]">5 menit yang lalu</p>
+        </div>
+    </a>
+}

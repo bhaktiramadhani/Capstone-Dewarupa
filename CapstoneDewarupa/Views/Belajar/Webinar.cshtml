@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Webinar Page";
+}
+@model IEnumerable<CapstoneDewarupa.Models.Course>
+
+<partial name="~/Views/_Partial/Navbar.cshtml" />
+
+
+<div class="px-[100px] pt-10 flex flex-col">
+    <h2 class="font-bold text-[40px] text-center">Cari Webinar</h2>
+    @* searching *@
+    <div class="flex self-center rounded-[22px] border-[1.5px] border-primary-green p-3 w-[500px] mt-7 mb-6">
+        <label for="search" class="rounded-full bg-primary-green p-3 w-[43.76px] h-[42px]">
+            <img src="http://localhost:5270/assets/svg/search.svg" alt="pencarian">
+        </label>
+        <form class="w-full flex-grow flex">
+            <input
+                class="border-none outline-none focus:border-none focus:outline-none focus:ring-transparent placeholder:font-semibold placeholder:text-[#777777] placeholder:opacity-50 flex-grow"
+                type="text" name="search" id="search" placeholder="Belajar Apa?">
+            <button
+                class="rounded-[22px] bg-primary-green text-white w-[96px] h-10 text-sm font-bold hover:bg-primary-green-hover transition-all hover:scale-[1.03]">
+                Cari
+                ilmu
+            </button>
+        </form>
+    </div>
+    <div>
+        <div class="grid md:grid-cols-3 md:gap-[60px] mt-10">
+            <partial name="~/Views/Home/_Partial/_Card.cshtml" model="Model" />
+        </div>
+    </div>
+</div>
+
+<partial name="~/Views/_Partial/Footer.cshtml" />

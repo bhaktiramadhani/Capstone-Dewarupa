@@ -1,0 +1,329 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<partial name="~/Views/_Partial/Navbar.cshtml" />
+
+<div id="chatbot" class="fixed  z-50 right-5 bottom-5" data-tooltip-target="tooltip-default"
+    data-modal-target="default-modal" data-modal-toggle="default-modal">
+    <div class="bg-primary-green w-full rounded-full p-2 shadow-card hover:shadow-card-hover cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+            <path fill="#FFFFFF"
+                d="M18 3a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4h-4.724l-4.762 2.857a1 1 0 0 1-1.508-.743L7 21v-2H6a4 4 0 0 1-3.995-3.8L2 15V7a4 4 0 0 1 4-4zm-2.8 9.286a1 1 0 0 0-1.414.014a2.5 2.5 0 0 1-3.572 0a1 1 0 0 0-1.428 1.4a4.5 4.5 0 0 0 6.428 0a1 1 0 0 0-.014-1.414M9.51 8H9.5a1 1 0 1 0 0 2h.01a1 1 0 0 0 0-2m5 0h-.01a1 1 0 0 0 0 2h.01a1 1 0 0 0 0-2" />
+        </svg>
+    </div>
+    <div id="tooltip-default" role="tooltip"
+        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        ChatBot
+        <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+</div>
+
+<div id="default-modal" tabindex="-1" aria-hidden="true"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full" id="chatbotcontent">
+
+    </div>
+</div>
+
+<div>
+    <div class="px-[100px]">
+        <div class="pt-[68px] pb-[140px] flex flex-wrap items-center justify-between relative">
+            <div class="pt-[78px] pb-[106px] w-[672px]">
+                <h1 class="text-5xl font-bold">
+                    <div>
+                        Masa Depan
+                        <span class="text-primary-green underline underline-offset-[14px]">Cerah</span>
+                    </div>
+                    <div class="pt-8">
+                        Ayo <span class="text-primary-green">Jelajahi</span> dan <span
+                            class="text-primary-green">Temukan</span>
+                    </div>
+                    <div class="pt-8">
+                        <span class="text-primary-green underline underline-offset-[22px]">Pelajaran</span> Baru Kamu
+                        Disini
+                    </div>
+                </h1>
+                <div class="mt-14">
+                    <a href="#belajar"
+                        class="text-white bg-primary-green hover:bg-primary-green-hover focus:ring-4 focus:ring-primary-green-hover font-medium rounded-md text-sm px-7 py-3 focus:outline-none shadow-xl transition-all">
+                        Mau
+                        Belajar
+                    </a>
+                </div>
+            </div>
+            <img src="assets/images/hero.png" alt="hero image" class="w-[350px] h-[350px] object-cover inline" />
+        </div>
+    </div>
+    <img class="absolute top-[213px] right-[555px]" src="assets/svg/abstrak-bintang.svg" alt="abstrak bintang">
+    <img class="absolute left-8 top-36" src="assets/svg/abstrak-segitiga.svg" alt="abstrak segitiga">
+    <img class="absolute left-8 top-[384px]" src="assets/svg/abstrak-titik-titik.svg" alt="abstrak titik titik">
+</div>
+
+<div class="pt-20 pb-[120px]  bg-primary-green relative">
+    <div class="px-[100px]">
+        <h2 class="text-white font-bold text-4xl text-center">Mengapa Kamu harus memilih Dewarupa?</h2>
+        <div class="flex justify-between mt-14 gap-6">
+            <div
+                class="bg-white pt-[68px] px-[29px] pb-6 flex flex-col items-center rounded-[30px] shadow-card hover:shadow-card-hover hover:scale-[1.01] transition-all">
+                <img width="188px" src="assets/svg/whyimage1.svg" alt="why image 1">
+                <h3 class="text-xl font-bold mt-7 mb-3">Belajar Dari Ahlinya</h3>
+                <p class="text-base text-[#1F1C14] text-center">
+                    Dapatkan bimbingan terbaik, pahami materi dengan
+                    mudah dan
+                    kuasai skill
+                    yang dicari. Ahlinya berbagi
+                    ilmu, masa depanmu jadi cerah!
+                </p>
+            </div>
+            <div
+                class="bg-white pt-[68px] px-[29px] pb-6 flex flex-col items-center rounded-[30px] shadow-card hover:shadow-card-hover hover:scale-[1.01] transition-all">
+                <img width="188px" src="assets/svg/whyimage2.svg" alt="why image 2">
+                <h3 class="text-xl font-bold mt-7 mb-3">Serunya Belajar Online</h3>
+                <p class="text-base text-[#1F1C14] text-center">
+                    Belajar jadi seru dengan webinar interaktif, tutorial
+                    mudah,
+                    dan blog keren. Gabung untuk pengalaman belajar yang menyenangkan dan inspiratif!
+                </p>
+            </div>
+            <div
+                class="bg-white pt-[68px] px-[29px] pb-6 flex flex-col items-center rounded-[30px] shadow-card hover:shadow-card-hover hover:scale-[1.01] transition-all">
+                <img width="137px" src="assets/svg/whyimage3.svg" alt="why image 3">
+                <h3 class="text-xl font-bold mt-7 mb-3">Upgrade Diri Sendiri</h3>
+                <p class="text-base text-[#1F1C14] text-center">
+                    Tingkatkan diri dengan webinar, tutorial, dan artikel
+                    inspiratif. Mulai sekarang gabung Dewarupa untuk belajar skill baru dan jadi versi terbaik dirimu
+                    yok!
+                </p>
+            </div>
+        </div>
+    </div>
+    <img class="absolute left-8 top-[130px]" src="assets/svg/abstrak-segitiga-white.svg" alt="abstrak segitiga">
+    <img class="absolute left-8 top-[390px]" src="assets/svg/abstrak-titik-titik-white.svg" alt="abstrak titik titik">
+    <img class="absolute right-[65px] top-[53px] -rotate-[34deg]" src="assets/svg/abstrak-segitiga-white.svg"
+        alt="abstrak segitiga">
+    <img class="absolute right-3 bottom-6 -rotate-[70deg]" src="assets/svg/abstrak-segitiga-white.svg"
+        alt="abstrak segitiga">
+</div>
+
+<section id="belajar" class="scroll-mt-14">
+    <div class="px-[100px] pt-10 flex flex-col">
+        <h2 class="font-bold text-[40px] text-center">Cari apa yang pengen kamu Pelajari</h2>
+        @* searching *@
+        <div class="flex self-center rounded-[22px] border-[1.5px] border-primary-green p-3 w-[500px] mt-7 mb-12">
+            <label for="search" class="rounded-full bg-primary-green p-3 w-[43.76px] h-[42px]">
+                <img src="assets/svg/search.svg" alt="pencarian">
+            </label>
+            <form class="w-full flex-grow flex" method="get" asp-controller="Belajar" asp-action="Index">
+                <input
+                    class="border-none outline-none focus:border-none focus:outline-none focus:ring-transparent placeholder:font-semibold placeholder:text-[#777777] placeholder:opacity-50 flex-grow"
+                    type="text" name="search" id="search" placeholder="Belajar Apa?">
+                <button type="submit"
+                    class="rounded-[22px] bg-primary-green text-white w-[96px] h-10 text-sm font-bold hover:bg-primary-green-hover transition-all hover:scale-[1.03]">
+                    Cari
+                    ilmu
+                </button>
+            </form>
+        </div>
+        <div class="self-center space-x-7">
+            <a href="/Belajar/Tutorial">
+                <div
+                    class="inline-block text-center text-white pt-4 pb-[14px] px-[50px] bg-primary-green hover:bg-primary-green-hover shadow-card hover:shadow-card-hover transition-all rounded-[22px] font-bold w-[180px]">
+                    <p class="text-[40px]">@ViewData["TutorialsCount"]</p>
+                    <p class="text-xl">Tutorial</p>
+                </div>
+            </a>
+            <a href="/Belajar/Webinar">
+                <div
+                    class="inline-block text-center text-white pt-4 pb-[14px] px-[50px] bg-primary-green hover:bg-primary-green-hover shadow-card hover:shadow-card-hover transition-all rounded-[22px] font-bold w-[180px]">
+                    <p class="text-[40px]">@ViewData["WebinarsCount"]</p>
+                    <p class="text-xl">Webinar</p>
+                </div>
+            </a>
+            <a href="/Belajar/Blog">
+                <div
+                    class="inline-block text-center text-white pt-4 pb-[14px] px-[50px] bg-primary-green hover:bg-primary-green-hover shadow-card hover:shadow-card-hover transition-all rounded-[22px] font-bold w-[180px]">
+                    <p class="text-[40px]">@ViewData["BlogsCount"]</p>
+                    <p class="text-xl">Blog</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="px-[100px] mt-[100px] mb-[60px]">
+    <div class="flex justify-between items-center">
+        <h4 class="font-bold text-[32px]">Tutorial Terakhir</h4>
+        <a href="/Belajar/Tutorial"
+            class="rounded-xl bg-primary-green hover:bg-primary-green-hover font-medium py-2 px-[18px] text-white h-10">
+            Lihat
+            Semua <img class="inline ml-[10px]" src="assets/svg/arrow-right.svg" alt="arrow right">
+        </a>
+    </div>
+    <div class="grid md:grid-cols-3 md:gap-[50px] mt-10">
+        @* Tutorial *@
+        @{
+            var tutorials = ViewData["Tutorials"];
+            if (tutorials is string)
+            {
+                <p>@tutorials</p>
+            }
+            else
+            {
+                <partial name="~/Views/Home/_Partial/_Card.cshtml" model="@tutorials" />
+            }
+        }
+    </div>
+</div>
+
+<div class="px-[100px] mt-[100px] mb-[60px]">
+    <div class="flex justify-between items-center">
+        <h4 class="font-bold text-[32px]">Webinar Terakhir</h4>
+        <a href="/Belajar/Webinar"
+            class="rounded-xl bg-primary-green hover:bg-primary-green-hover font-medium py-2 px-[18px] text-white h-10">
+            Lihat
+            Semua <img class="inline ml-[10px]" src="assets/svg/arrow-right.svg" alt="arrow right">
+        </a>
+    </div>
+    <div class="grid md:grid-cols-3 md:gap-[50px] mt-10">
+        @* Webinar *@
+        @{
+            var webinars = ViewData["Webinars"];
+            if (webinars is string)
+            {
+                <p>@webinars</p>
+            }
+            else
+            {
+                <partial name="~/Views/Home/_Partial/_Card.cshtml" model="@webinars" />
+            }
+        }
+    </div>
+</div>
+
+<div class="px-[100px] mt-[100px] mb-[60px]">
+    <div class="flex justify-between items-center">
+        <h4 class="font-bold text-[32px]">Blog Terakhir</h4>
+        <a href="/Belajar/Blog"
+            class="rounded-xl bg-primary-green hover:bg-primary-green-hover font-medium py-2 px-[18px] text-white h-10">
+            Lihat
+            Semua <img class="inline ml-[10px]" src="assets/svg/arrow-right.svg" alt="arrow right">
+        </a>
+    </div>
+    <div class="grid md:grid-cols-3 md:gap-[50px] mt-10">
+        @* Blog *@
+        @{
+            var blogs = ViewData["Blogs"];
+            if (blogs is string)
+            {
+                <p>@blogs</p>
+            }
+            else
+            {
+                <partial name="~/Views/Home/_Partial/_Card.cshtml" model="@blogs" />
+            }
+        }
+    </div>
+</div>
+
+<div class="px-[100px] mx-auto">
+    <div class="text-center mb-[60px]">
+        <h3 class="font-bold text-primary-green text-5xl mb-4">Kontak Kami</h3>
+        <p class="font-medium text-xl">
+            Kami selalu siap untuk mendengarkan feedback dari anda <br> baik itu pertanyaan
+            maupun saran.
+        </p>
+    </div>
+    <div class="rounded-[22px] shadow-kontak-card flex">
+        <div class="rounded-2xl my-3 ml-3 w-[400px] pt-[50px] px-[50px] pb-20 bg-primary-green text-white">
+            <h4 class="font-semibold text-2xl text-center">Informasi Kontak</h4>
+            <div class="mt-10 space-y-[60px]">
+                <div class="flex gap-[30px] items-center">
+                    <img src="assets/svg/call.svg" alt="telpon">
+                    <p class="text-xl">+6281234567891</p>
+                </div>
+                <div class="flex gap-[30px] items-center">
+                    <img src="assets/svg/email-solid.svg" alt="email">
+                    <p class="text-xl">care@dewarupa.org</p>
+                </div>
+                <div class="flex gap-[30px] items-center">
+                    <img src="assets/svg/location.svg" alt="lokasi">
+                    <p class="text-xl">Kota Denpasar, Bali</p>
+                </div>
+            </div>
+        </div>
+        <div class="mx-[40px] my-[50px] space-y-7">
+            <form id="emailForm" method="post">
+                <div class="flex gap-7">
+                    <div class="space-y-2 w-1/2">
+                        <label class="text-primary-green text-xl font-bold" for="nama">Nama Anda</label>
+                        <input
+                            class="py-3 px-[14px] h-11 rounded-xl outline-none focus:outline-none border-[#A2A2A2] focus:ring-transparent w-full"
+                            type="text" id="nama" placeholder="Nama Lengkap...">
+                    </div>
+                    <div class="space-y-2 w-1/2">
+                        <label class="text-primary-green text-xl font-bold" for="email">Email Anda</label>
+                        <input
+                            class="py-3 px-[14px] h-11 rounded-xl outline-none focus:outline-none border-[#A2A2A2] focus:ring-transparent w-full"
+                            type="email" id="email" placeholder="Email...">
+                    </div>
+                </div>
+                <div class="space-y-2 mt-2">
+                    <label class="text-primary-green text-xl font-bold" for="subject-pesan">Subject Pesan</label>
+                    <input
+                        class="py-3 px-[14px] h-11 rounded-xl outline-none focus:outline-none border-[#A2A2A2] focus:ring-transparent w-full"
+                        type="text" id="subject-pesan" placeholder="Subject pesan...">
+                </div>
+                <div class="space-y-2 mt-2">
+                    <label class="text-primary-green text-xl font-bold" for="pesan">Pesan Anda</label>
+                    <textarea
+                        class="py-3 px-[14px] h-[86px] rounded-xl outline-none focus:outline-none border-[#A2A2A2] focus:ring-transparent w-full"
+                        id="pesan" placeholder="Pesan yang ingin disampaikan..."></textarea>
+                </div>
+                <button type="submit"
+                    class="mt-5 rounded-xl bg-primary-green hover:bg-primary-green-hover font-medium py-2 px-[18px] text-white h-10">
+                    Kirim Pesan
+                    <img class="inline ml-[10px]" src="assets/svg/arrow-right.svg" alt="arrow right">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<partial name="~/Views/_Partial/Footer.cshtml" />
+
+
+<script>
+    document.getElementById('emailForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Mencegah pengiriman formulir langsung
+
+        // Ambil nilai dari formulir
+        const name = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject-pesan').value;
+        const message = document.getElementById('pesan').value;
+
+        // Mengonstruksi URL Gmail dengan parameter
+        const recipientEmail = 'bakti0048@gmail.com'; // Ganti dengan alamat email penerima
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Perkenalkan Saya ${name} \n${message}`)}`;
+
+        // Redirect ke URL Gmail
+        window.location.href = gmailUrl;
+    });
+
+    let chatbotClicked = false;
+
+    document.getElementById('chatbot').addEventListener('click', function () {
+        if (!chatbotClicked) {
+            const chatbotcontent = document.getElementById('chatbotcontent');
+            const iframe = document.createElement('iframe');
+            iframe.src = "https://copilotstudio.microsoft.com/environments/Default-d7b95ec4-9a7f-4260-b2e3-eb53f0ac8401/bots/crdf2_copilotDewarupa/webchat?__version__=2";
+            iframe.width = "100%";
+            iframe.height = "600px";
+            iframe.style.border = "none";
+            chatbotcontent.appendChild(iframe);
+            chatbotClicked = true;
+        }
+    });
+</script>
